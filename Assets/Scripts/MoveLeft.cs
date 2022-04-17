@@ -6,13 +6,10 @@ using UnityEngine;
 public class MoveLeft : MonoBehaviour
 {
     [SerializeField] private float mSpeed = 1;
-    private Enemy mEnemy;
-    private PowerUp mPowerUp;
-    
+
     private void Awake()
     {
-        mEnemy = GetComponent<Enemy>();
-        mPowerUp = GetComponent<PowerUp>();
+        
     }
 
     // Update is called once per frame
@@ -21,30 +18,9 @@ public class MoveLeft : MonoBehaviour
         
         transform.Translate(Vector3.left * Time.deltaTime * mSpeed, Space.World);
 
-        if (GetType() == typeof(PowerUp))
-        {
-            if (transform.position.x < -11.4)
-            {
-                transform.position += Vector3.right * 720;
-                if (!PowerUp.PoweredUp)
-                {
-                    mPowerUp?.Respawn();
-                }
-            }
-        }
-        else
-        {
-            if (transform.position.x < -11.4)
-            {
-                transform.position += Vector3.right * 24;
-                ShowRandomSprite();
-                mEnemy?.Respawn();
-            }
-        }
-        
     }
 
-    private void ShowRandomSprite()
+    /*private void ShowRandomSprite()
     {
         int index = UnityEngine.Random.Range(0, 3);
         int childCount = transform.childCount;
@@ -61,5 +37,5 @@ public class MoveLeft : MonoBehaviour
     private void OnEnable()
     {
         ShowRandomSprite();
-    }
+    }*/
 }

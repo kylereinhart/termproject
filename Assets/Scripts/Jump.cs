@@ -15,20 +15,10 @@ public class Jump : MonoBehaviour
 
     void Update()
     {
-        if (!PauseMenu.GameIsPaused)
+        if (Input.GetKeyDown(KeyCode.Space) || Input.GetButtonDown("Fire1"))
         {
-            if (Input.GetKeyDown(KeyCode.Space) || Input.GetButtonDown("Fire1"))
-            {
-                _rigidbody2D.AddForce(mjumpForce);
-                GetComponent<AudioSource>().Play();
-            }
-            else if (Input.GetButtonDown("Fire2"))
-            {
-                if (PowerUp.PoweredUp)
-                {
-                    
-                }
-            }
+            _rigidbody2D.AddForce(mjumpForce);
+            GetComponent<AudioSource>().Play();
         }
     }
 }
