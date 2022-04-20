@@ -2,7 +2,7 @@
 using UnityEditor.AI;
 using UnityEngine;
 
-namespace Fifth.Code.Scripts
+namespace Scripts
 {
     public class TerrainNavMeshBuilder : MonoBehaviour
     {
