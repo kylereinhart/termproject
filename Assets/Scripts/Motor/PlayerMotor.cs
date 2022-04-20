@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.AI;
 
-namespace Scripts.Motor {
+namespace Motor {
     [RequireComponent(typeof(CharacterController), typeof(NavMeshAgent))]
     public class PlayerMotor : MonoBehaviour, IMotor {
         [SerializeField] private float movementSpeed = 5.0f;

@@ -1,7 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using Scripts.Motor;
+using Motor;
 using UnityEngine;
 
 public class Player : MonoBehaviour

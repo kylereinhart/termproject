@@ -4,21 +4,20 @@ using UnityEngine;
 
 public class Jump : MonoBehaviour
 {
-    [SerializeField] private Vector2 mjumpForce;
-    private Rigidbody2D _rigidbody2D;
+    [SerializeField] private Vector3 mjumpForce;
+    private Rigidbody _rigidbody;
 
     // Update is called once per frame
     private void Start()
     {
-        _rigidbody2D = GetComponent<Rigidbody2D>();
+        _rigidbody = GetComponent<Rigidbody>();
     }
 
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space) || Input.GetButtonDown("Fire1"))
         {
-            _rigidbody2D.AddForce(mjumpForce);
-            GetComponent<AudioSource>().Play();
+            _rigidbody.AddForce(mjumpForce);
         }
     }
 }

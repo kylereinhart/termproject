@@ -8,14 +8,9 @@ public class Move : MonoBehaviour
     // Start is called before the first frame update
     Vector3 movement;
 
-    public Move()
+    void Awake()
     {
-        movement = transform.position;
-    }
-
-    void Start()
-    {
-        
+        movement = gameObject.transform.position;
     }
 
     // Update is called once per frame
