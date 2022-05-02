@@ -1,9 +1,9 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEditor.UI;
 using UnityEngine;
 
-public class CameraRotate : MonoBehaviour
+public class Move : MonoBehaviour
 {
     // Start is called before the first frame update
 
